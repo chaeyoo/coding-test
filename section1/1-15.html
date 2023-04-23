@@ -1,0 +1,23 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(s) {
+        let idx;
+        if (s.length % 2 === 1) {
+            idx = (s.length - 1) / 2
+            return s[idx];
+        } else if (s.length % 2 === 0) {
+            idx = s.length / 2 -1
+            return s[idx] + s[idx + 1];
+        }
+    }
+
+    console.log(solution("study"));
+    console.log(solution("good"));
+</script>
+</body>
+</html>

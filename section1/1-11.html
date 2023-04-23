@@ -5,11 +5,11 @@
 </head>
 <body>
 <script>
-    function solution(s){
+    function solution(s) {
         const strArr = [...s];
         const lowerStrArr = [...s.toLowerCase()];
         let cnt = 0;
-        for (let i=0; i<strArr.length; i++) {
+        for (let i = 0; i < strArr.length; i++) {
             if (strArr[i] !== lowerStrArr[i]) {
                 cnt++;
             }
@@ -17,7 +17,7 @@
         return cnt;
     }
 
-    let str="KoreaTimeGood";
+    let str = "KoreaTimeGood";
     console.log(solution(str));
 </script>
 </body>

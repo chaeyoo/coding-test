@@ -5,9 +5,9 @@
 </head>
 <body>
 <script>
-    function solution(s){
+    function solution(s) {
         const arr = [...s];
-        for (let i=0; i<arr.length; i++) {
+        for (let i = 0; i < arr.length; i++) {
             if (arr[i].match(new RegExp(/^[A-Z]/)) !== null) {
                 arr[i] = arr[i].toLowerCase();
             } else if (arr[i].match(new RegExp(/^[a-z]/)) !== null) {

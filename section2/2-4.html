@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(arr){
+        let add = 1;
+        let result = 0;
+        for (let i=0;i<arr.length; i++) {
+            if (arr[i]) {
+                result += add;
+                add++;
+            } else {
+                add = 1;
+            }
+        }
+
+        return result;
+    }
+
+    let arr=[1, 0, 1, 1, 1, 0, 0, 1, 1, 0];
+    console.log(solution(arr));
+</script>
+</body>
+</html>

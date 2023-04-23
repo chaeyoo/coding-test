@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(arr){
+        return arr.map((v) => {
+            let cnt = 1;
+            for (let i=0; i<arr.length; i++) {
+                if (arr[i] > v) {
+                    cnt++;
+                }
+            }
+            return cnt;
+        })
+    }
+
+    let arr=[87, 89, 92, 100, 76];
+    let arr1 = [92, 92, 92, 80];
+    console.log(solution(arr));
+    console.log(solution(arr1));
+</script>
+</body>
+</html>
