@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(s){
+        const str = s.toLowerCase();
+        const regex = /^[a-z|A-Z]+$/;
+        // aba (0, length-1) abcba (0, length-1) (1, length-2) 5->2  4-> 2
+        // abba (0, length-1) (1, length-2) abccba (0, length-1) (1, length-2) (2, length-3)
+        let result = "YES";
+        const len = str.length
+        for (let i=0; i<Math.floor(len/2); i++) {
+            if (regex.test(str[i]) && regex.test(str[len-1-i]) && str[i] !== str[len-1-i]) {
+                result = "NO";
+            }
+        }
+        return result;
+    }
+
+    let str="found7, time: study; Yduts; emit, 7Dnuof";
+    console.log(solution(str));
+</script>
+</body>
+</html>
