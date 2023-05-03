@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(s, t){
+        let result = "";
+        const idx = []
+        for (let i=0; i<s.length; i++) {
+           if (s[i] === t) {
+               idx.push(i)
+           }
+        }
+
+        for (let i=0; i<s.length; i++) {
+            const distance = idx.map((v) => {
+                return Math.abs(v - i)
+            })
+            const min = Math.min(...distance)
+            result += min + ""
+        }
+S
+        return result;
+    }
+
+    let str="teachermode";
+    console.log(solution(str, 'e'));
+</script>
+</body>
+</html>

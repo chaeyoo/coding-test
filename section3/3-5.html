@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>출력결과</title>
+</head>
+<body>
+<script>
+    function solution(s){
+        let result = s[0];
+        let char  = s[0];
+        let cnt = 1;
+        for (let i=1; i<s.length; i++) {
+            if (char !== s[i]) {
+                result += (cnt > 1 ? cnt : "") + s[i] ;
+                char = s[i];
+                cnt = 1;
+            } else {
+                cnt++;
+            }
+        }
+        return result;
+    }
+
+    let str="KKHSSSSSSSE";
+    console.log(solution(str));
+</script>
+</body>
+</html>
