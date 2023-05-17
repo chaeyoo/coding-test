@@ -5,11 +5,34 @@
 </head>
 <body>
 <script>
-    function solution(m, product){
+    function solution(m, product) {
 
+        const productPriceArr = product.map((v) => {
+            return v[0];
+        });
+
+        const maxPrice = Math.max(...productPriceArr);
+
+        // *** 제일 비싼걸 할인 받는게 정답 ??? 아님.. 모든 경우의 수를 다 따지는 것이 완전 탐색 ***
+        const totalPrice = product.map((v) => {
+            return v[0] === maxPrice ? v[0] / 2 : v[0] + v[1];
+        });
+
+        totalPrice.sort((a, b) => a - b);
+
+        let i = 0;
+        while (m - totalPrice[i+1] >= 0) {
+            console.log('빼기 전 ', m, '::',  totalPrice[i])
+            m -= totalPrice[i]
+            console.log('빼고 난 후 ', m, '::')
+            console.log('다음걸 뺏을 때', m - totalPrice[i+1])
+
+            i++;
+        }
+        return i;
     }
 
-    let arr=[[6, 6], [2, 2], [4, 3], [4, 5], [10, 3]];
+    let arr = [[6, 6], [2, 2], [4, 3], [4, 5], [10, 3]];
     console.log(solution(28, arr));
 </script>
 </body>

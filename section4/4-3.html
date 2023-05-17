@@ -2,10 +2,41 @@
 <head>
     <meta charset="UTF-8">
     <title>출력결과</title>
+    <style>
+        #ddd {
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
+<div id="ddd">
+
+</div>
 <script>
     function solution(test){
+        let answer = 0;
+        const m = test.length; // 시험 횟수 3번
+        const n = test[0].length; // 학생 수 4명
+        for(let i=1; i<=n; i++){ // 1, 2, 3, 4
+            for(let j=1; j<=n; j++){ // 1, 2, 3, 4
+                let cnt=0;
+                for(let k=0; k<m; k++){ // 0, 1, 2 => 3회 시험 반복문
+                    let pi = 0;
+                    let pj = 0;
+                    for(let s=0; s<n; s++){ // 0, 1, 2, 3 => 4명 학생 반복문
+                        // m번째 시험에서 n번학생이 i랑 같을 때
+                        if(test[k][s]===i) pi=s;
+                        // m번째 시험에서 n번학생이 j랑 같을 때
+                        if(test[k][s]===j) pj=s;
+                    }
+                    if(pi<pj) cnt++; // i의 등수가 앞설 때 cnt++
+                }
+                if(cnt===m) answer++; // cnt가 시험 횟수랑 똑같으면 answer++
+            }
+        }
+        return answer;
     }
 
     let arr=[[3, 4, 1, 2], [4, 3, 2, 1], [3, 1, 4, 2]];
