@@ -1,6 +1,5 @@
 //아이디어: 0~9까지 숫자의 출현 빈도만큼 출력해주기
 
-const test = "9792382";
 const input = test.toString().split("\n");
 
 const arr = Array(10).fill(0);
@@ -17,3 +16,5 @@ for (let i=9; i>=0; i--) {
 }
 
 console.log(result)
+
+const test = "9792382";
