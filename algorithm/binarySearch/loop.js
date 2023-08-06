@@ -1,5 +1,5 @@
 /**
- *
+ * 반복문으로 이진탐색
  * @param arr 정렬된 배열
  * @param target 찾고자 하는 숫자
  * @param start 시작 인덱스

@@ -1,11 +1,15 @@
-/**
- * 배열 내 target 숫자의 가장 작은 인덱스
- * @param arr
- * @param target
- * @param start
- * @param end
- * @returns {*}
- */
+const test = "10\n" +
+    "6 3 2 10 10 10 -10 -10 7 3\n" +
+    "8\n" +
+    "10 9 -5 2 3 4 5 -10";
+const input = test.toString().split("\n");
+const arr1 = input[1].split(" ").map(Number);
+arr1.sort(function (a, b) {
+    return a-b;
+});
+
+const arr2 = input[3].split(" ").map(Number);
+
 function lowerBound(arr, target, start, end) {
     while (start < end) {
         let mid = Math.floor((start + end) / 2);
@@ -15,14 +19,6 @@ function lowerBound(arr, target, start, end) {
     return end;
 }
 
-/**
- * 배열 내 target 숫자의 가장 큰 인덱스
- * @param arr
- * @param target
- * @param start
- * @param end
- * @returns {*}
- */
 function upperBound(arr, target, start, end) {
     while (start < end) {
         let mid = Math.floor((start + end) / 2);
@@ -32,19 +28,14 @@ function upperBound(arr, target, start, end) {
     return end;
 }
 
-/**
- * 범위 내 숫자 카운트
- * @param arr
- * @param leftValue
- * @param rightValue
- * @returns {number}
- */
 function countByRange(arr, leftValue, rightValue) {
     let rightIdx = upperBound(arr, rightValue, 0, arr.length);
     let leftIdx = lowerBound(arr, leftValue, 0, arr.length);
     return rightIdx - leftIdx;
 }
+let result = "";
+for (let i=0; i<arr2.length; i++) {
+    result += countByRange(arr1, arr2[i], arr2[i]) + " ";
+}
 
-let arr = [1, 2, 3, 3, 3, 3, 4, 4, 8, 9, ];
-console.log(countByRange(arr, 4, 4, ));
-console.log(countByRange(arr, -1, 3));
+console.log(result)
