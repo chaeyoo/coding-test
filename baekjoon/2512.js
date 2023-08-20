@@ -21,13 +21,13 @@ function question(test){
             total += Math.min(mid, x);
         }
         if (total <= m) {
-            result = mid; // 상한액(최대화가 목표)을 증가
+            selected = mid; // 상한액(최대화가 목표)을 증가
             start = mid + 1;
         } else {
             end = mid - 1;
         }
     }
-    return result;
+    return selected;
 }
 
 console.log(question(test));

@@ -9,6 +9,9 @@ for (let i = 1; i <= n; i++) {
     arr.push(i);
 }
 
+dfs([], 0);
+console.log(answer);
+
 function dfs(result, depth) {
     if (depth === m) {
         for (let x of result) {
@@ -26,6 +29,3 @@ function dfs(result, depth) {
     }
 }
 
-
-dfs([], 0);
-console.log(answer);

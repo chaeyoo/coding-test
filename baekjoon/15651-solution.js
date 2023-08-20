@@ -8,7 +8,10 @@ for (let i = 1; i <= n; i++) {
     arr.push(i);
 }
 let answer = "";
-const selected = []
+const selected = [];
+dfs(arr, 0);
+console.log(answer);
+
 function dfs(arr, depth) {
     if (depth === m) {
         let result = [];
@@ -24,6 +27,3 @@ function dfs(arr, depth) {
         selected.pop();
     }
 }
-
-dfs(arr, 0);
-console.log(answer)

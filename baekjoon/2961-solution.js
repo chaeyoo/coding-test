@@ -1,5 +1,8 @@
-const test = "1\n" +
-    "3 10";
+const test = "4\n" +
+    "1 7\n" +
+    "2 6\n" +
+    "3 8\n" +
+    "4 9";
 const input = test.toString().split('\n');
 const n = Number(input[0]);
 const arr = [];
@@ -12,6 +15,8 @@ let minValue = 1e9;
 let result = [];
 let visited = new Array(n).fill(false);
 
+dfs([], 0);
+console.log(minValue);
 
 function dfs(depth, start) {
     if (depth >= 1) {
@@ -35,6 +40,3 @@ function dfs(depth, start) {
         result.pop();
     }
 }
-
-dfs([], 0);
-console.log(minValue)

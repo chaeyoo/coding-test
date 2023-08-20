@@ -19,6 +19,7 @@ for (let tc = 0; tc < testCase; tc++) {
     dfs(arr, 0, 0);
     str += '\n';
 }
+console.log(str);
 
 function dfs(arr, depth, start) {
     if (depth === 6) {
@@ -39,4 +40,3 @@ function dfs(arr, depth, start) {
     }
 }
 
-console.log(str);
