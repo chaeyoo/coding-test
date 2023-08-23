@@ -30,5 +30,5 @@ function question(test){
     return selected;
 }
 
-console.log(question(test));
-console.log(question(test2));
+console.log(question(test)); // 127
+console.log(question(test2)); //100
