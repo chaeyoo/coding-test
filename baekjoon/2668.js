@@ -1,5 +1,7 @@
 const test = "7\n" +
-    "3\n" + "1\n" + "1\n" + "5\n" + "5\n" + "4\n" + "6";
+    "3\n" + "1\n" +
+    "1\n" + "5\n" +
+    "5\n" + "4\n" + "6";
 const input = test.toString().split('\n');
 const n = Number(input[0]);
 const graph = [0];
