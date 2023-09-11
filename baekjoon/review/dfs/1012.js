@@ -25,7 +25,7 @@ for (let i=0; i<testCase; i++) {
         let [x, y] = input[line + i].split(' ').map(Number);
         graph[y][x] = 1
     }
-    // console.log(graph, 'graph');
+    console.log(graph, 'graph');
 
     for(let i=0; i<n; i++) {
         for (let j=0; j<m; j++) {
