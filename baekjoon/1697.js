@@ -1,27 +1,4 @@
-class Queue {
-    constructor() {
-        this.items = [];
-        this.headIndex = 0;
-        this.tailIndex = 0;
-    }
-    enqueue(item) {
-        this.items[this.tailIndex] = item;
-        this.tailIndex++;
-    }
-    dequeue() {
-        const item = this.items[this.headIndex];
-        delete this.items[this.headIndex];
-        this.headIndex++;
-        return item;
-    }
-    peek() {
-        return this.items[this.headIndex];
-    }
-    getLength() {
-        return this.tailIndex - this.headIndex;
-    }
-
-}
+import {Queue} from "../algorithm/bfs/index.js";
 
 const test = "5 17";
 const input = test.toString().split('\n');
@@ -44,7 +21,7 @@ function bfs() {
             return visited[cur];
         }
         for (let next of [cur - 1, cur + 1, cur *2]) {
-            if (next < 0 || n >= MAX) continue;
+            if (next < 0 || next >= MAX) continue;
             if (visited[next] == 0) {
                 visited[next] = visited[cur] + 1; // 방문처리 && 해당 위치까지 거리값을 기록
                 queue.enqueue(next);
