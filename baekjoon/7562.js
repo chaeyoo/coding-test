@@ -1,15 +1,8 @@
 import {Queue} from "../algorithm/bfs/index.js";
 
-const test = "3\n" +
-    "8\n" +
-    "0 0\n" +
-    "7 0\n" +
-    "100\n" +
-    "0 0\n" +
-    "30 50\n" +
-    "10\n" +
-    "1 1\n" +
-    "1 1";
+const test = "3\n" + "8\n" + "0 0\n" + "7 0\n" +
+    "100\n" + "0 0\n" + "30 50\n" +
+    "10\n" + "1 1\n" + "1 1";
 const input = test.toString().split('\n');
 
 let dx = [-2, -2, -1, -1, 1, 1, 2, 2];

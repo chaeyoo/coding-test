@@ -34,12 +34,15 @@ while(testCases--) {
     else console.log("NO");
 }
 
+// 색칠하는 bfs
 function bfs(x, graph, visited) {
     let queue = new Queue();
     queue.enqueue(x);
+    // 빨강-0 파랑-1, 이어져있지 않은 최초 노드는 빨강으로 색칠
     visited[x] = 0;
     while (queue.getLength() != 0) {
         let x = queue.dequeue();
+        // 인접한 원소가 색칠되지 않았다면 반대색으로 색칠
         for (let y of graph[x]) {
             if (visited[y] == -1) {
                 visited[y] = (visited[x] + 1) % 2;
