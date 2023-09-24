@@ -1,11 +1,7 @@
 import {Queue} from "../algorithm/bfs/index.js";
 
-const test = "9 3 5\n" +
-    "1 2 3\n" +
-    "1 4 5\n" +
-    "3 6 7\n" +
-    "5 6 7\n" +
-    "6 8 9";
+const test = "9 3 5\n" + "1 2 3\n" + "1 4 5\n" +
+    "3 6 7\n" + "5 6 7\n" + "6 8 9";
 const input = test.toString().split('\n');
 
 let [n, k, m] = input[0].split(' ').map(Number);
@@ -26,10 +22,9 @@ for(let i=1; i<=m; i++) {
     }
 }
 
-// console.log(graph);
-
 let visited = new Set([1]);
 let queue = new Queue();
+
 queue.enqueue([1, 1]); // [거리, 노드번호]
 let found = false;
 
@@ -52,3 +47,7 @@ while (queue.getLength() != 0) {
 }
 
 if (!found) console.log(-1);
+
+
+
+
