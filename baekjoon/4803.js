@@ -10,7 +10,7 @@ let visited = [];
 while (true) {
     let [n, m] = input[line].split(' ').map(Number);
     if (n == 0 && m == 0) break;
-    graph = [];
+    dp = [];
     for (let i=1; i<=n; i++) {
         graph[i] = [];
     }
@@ -35,7 +35,7 @@ while (true) {
 
 function isCycle(node, prevNode) {
    visited[node] = true;
-   for (let nextNode of graph[node]) {
+   for (let nextNode of dp[node]) {
        if (!visited[nextNode]) {
            if (isCycle(nextNode, node)) return true;
        } else if (nextNode != prevNode) return true;
