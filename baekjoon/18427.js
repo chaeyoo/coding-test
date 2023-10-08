@@ -11,6 +11,7 @@ for (let i=1; i<=n; i++) {
     a.push(input[i].split(' ').map(Number));
 }
 
+console.log(a)
 // 높이가 0인 경우는 1가지
 d[0] = 1;
 
