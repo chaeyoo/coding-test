@@ -7,8 +7,8 @@ const input = test.toString().split('\n');
 const n = Number(input[0]);
 let arr = [];
 for (let i=0; i<n; i++) {
-    let c = Number(input[i+1].split(' '));
-    let s = Number(input[i+1].split(' '));
+    let c = Number(input[i+1].split(' ')[0]);
+    let s = Number(input[i+1].split(' ')[1]);
     arr.push([c, s, i]);
 }
 arr.sort(function (a, b) {
