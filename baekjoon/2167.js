@@ -1,10 +1,5 @@
-const test = "2 3\n" +
-    "1 2 4\n" +
-    "8 16 32\n" +
-    "3\n" +
-    "1 1 2 3\n" +
-    "1 2 1 2\n" +
-    "1 3 2 3\n";
+const test = "2 3\n" + "1 2 4\n" + "8 16 32\n" +
+    "3\n" + "1 1 2 3\n" + "1 2 1 2\n" + "1 3 2 3\n";
 
 const input = test.toString().split('\n');
 const [n, m] = input[0].split(' ').map(Number);

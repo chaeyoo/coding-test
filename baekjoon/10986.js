@@ -9,21 +9,19 @@ const arr = input[1].split(' ').map(Number);
 let sumValue = 0;
 let prefixSum = [0];
 
+// 누적합
 for (let a of arr) {
     sumValue += a;
     prefixSum.push(sumValue);
 }
-// 누적합
-// console.log(prefixSum)
 
+// 누적합을 M으로 나눈 나머지
 let processed = [];
 for (let a of prefixSum) {
     processed.push(a % m);
 }
 
-// 누적합을 M으로 나눈 나머지
-// console.log(processed);
-
+// 나머지 각각 개수를 COUNTING
 let counter = {};
 for (let i=0; i<=n; i++) {
     if (processed[i] in counter) {
@@ -33,7 +31,7 @@ for (let i=0; i<=n; i++) {
     }
 }
 
-// 나머지를 COUNTING
+
 console.log(counter);
 
 let result = 0;

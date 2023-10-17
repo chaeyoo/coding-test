@@ -23,10 +23,6 @@ let result = Array(n).fill(0); // 최종결과 배열
 let start = 0;
 while (start < n) {
     console.log('====while START====')
-    console.log(arr);
-    console.log('while >> sum', sum);
-    console.log('while >> colorSum', colorSum);
-    console.log('while >> result', result);
     console.log(start, 'start');
     let end = start;
     // 크기가 같은 공의 마지막 인덱스 찾기

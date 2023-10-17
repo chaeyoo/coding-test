@@ -7,8 +7,10 @@ for (let i of data) {
     sumValue += i;
     prefixSum.push(sumValue);
 }
+console.log(prefixSum);
 
 let left = 4;
 let right = 8;
 
 console.log(prefixSum[right] - prefixSum[left-1]);
+
