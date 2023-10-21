@@ -4,6 +4,7 @@ const input = test.toString().split('\n');
 const [n, x] = input[0].split(' ').map(Number);
 const arr = [0, ...input[1].split(' ').map(Number)];
 
+// 준비물
 let sum = 0;
 for (let i=1; i<=n; i++) {
     if (i<=x) {
@@ -14,6 +15,7 @@ for (let i=1; i<=n; i++) {
 let maxSum = sum;
 let count = 1;
 
+// 시작
 let left = 1;
 let right = x;
 

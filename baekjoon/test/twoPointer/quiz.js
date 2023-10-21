@@ -20,4 +20,5 @@ for (let start=0; start<n; start++) {
     intervalSum -= data[start];
 }
 
-console.log(count)
+
+console.log(count);
