@@ -19,16 +19,13 @@ while(i < n && j < m) {
         result.push(b[j]);
         j += 1;
     }
-    console.log(result)
 }
 
-console.log('while22')
 while (i<n) {
     result.push(a[i]);
     i += 1;
 }
-console.log(result)
-console.log('while33')
+
 while(j<m) {
     result.push(b[j]);
     j += 1;
@@ -36,3 +33,4 @@ while(j<m) {
 console.log(result)
 
 console.log(result.join(" "));
+

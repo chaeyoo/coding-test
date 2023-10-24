@@ -24,3 +24,4 @@ for (let start = 0; start < n; start++) {
 }
 
 console.log(result);
+

@@ -21,4 +21,5 @@ for (let start=0; start<n; start++) {
 }
 
 
-console.log(count);
+console.log(count); //5
+

@@ -11,14 +11,11 @@ for (let i=1; i<=n; i++) {
         sum += arr[i];
     }
 }
-
 let maxSum = sum;
 let count = 1;
-
 // 시작
 let left = 1;
 let right = x;
-
 while(true) {
     left += 1;
     right += 1;
@@ -38,3 +35,4 @@ if (maxSum == 0) {
     console.log(maxSum);
     console.log(count);
 }
+
