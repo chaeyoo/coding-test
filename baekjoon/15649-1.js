@@ -12,7 +12,7 @@ let selected = [];
 let answer = "";
 function dfs(arr, depth) {
 
-    console.log('dfs 시작: depth::', depth)
+    console.log('index 시작: depth::', depth)
     if (depth == m) {
         console.log('m이랑 depth랑 같아ㅏ')
         let result = [];

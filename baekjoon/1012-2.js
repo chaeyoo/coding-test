@@ -22,7 +22,7 @@ for (let tc=testCase; tc>0; tc--) {
         graph[x][y] = 1;
     }
 
-    // dfs
+    // index
     let answer = 0;
     for (let i=0; i<n; i++) {
         for (let j=0; j<m; j++) {

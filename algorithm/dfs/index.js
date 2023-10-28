@@ -1,9 +1,9 @@
-function dfs(graph, v, visited) {
+function index(graph, v, visited) {
     visited[v] = true;
     console.log(v);
     for (let i of graph[v]) {
         if (!visited[i]) {
-            dfs(graph, i, visited)
+            index(graph, i, visited)
         }
     }
 }
@@ -22,4 +22,4 @@ const graph = [
 ];
 
 visited = new Array(9).fill(false);
-dfs(graph, 1, visited);
+index(graph, 1, visited);
