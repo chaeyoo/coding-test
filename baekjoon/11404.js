@@ -26,7 +26,7 @@ for (let i=1; i<=n; i++) {
 
 for (let i=2; i<m+2; i++) {
     let [x, y, z] = input[i].split(' ').map(Number);
-    // 그래프에 거리 넣을 때 더 작은 숫자 넣기
+    // 그래프에 거리 넣을 때 더 작은 숫자 넣기 => 중복간선 존재
     graph[x][y] = Math.min(graph[x][y], z);
 }
 // console.log(graph);
@@ -44,7 +44,7 @@ for (let k=1; k<=n; k++) {
 for (let a=1; a<=n; a++) {
     let line = '';
     for (let b=1; b<=n; b++) {
-        if (graph[a][b] == INF) line += 'INF ';
+        if (graph[a][b] == INF) line += '0 ';
         else line += graph[a][b] + ' ';
     }
     console.log(line);
