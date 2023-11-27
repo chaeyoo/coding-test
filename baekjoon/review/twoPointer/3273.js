@@ -14,13 +14,19 @@ let end = n-1;
 let count = 0;
 
 while(start < end) {
+    // 포인트들의 합이 x보다 큰 경우 값을 줄이기
+    // end 줄이기
     while (end > 0 && arr[start] + arr[end] > x) {
         end--;
     }
+    // 포인트들 합이 목표값은 경우
+    // end 줄이기 & count 늘이기
     if (arr[start] + arr[end] == x) {
         count++;
         end--;
     }
+
+    // 반복문 끝에 start 인덱스 +1
     start += 1;
 }
 console.log(count);
