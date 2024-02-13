@@ -12,7 +12,7 @@ dp[1] = 1;
 
 function fibo(n){
     if(dp[n] != 0) {
-        return dp[n]
+        return dp[n];
     } else {
         dp[n] = fibo(n-1) + fibo(n-2);
         return dp[n];
