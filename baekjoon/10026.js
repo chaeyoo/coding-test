@@ -6,6 +6,7 @@ let arr = [];
 for (let i = 0; i < n; i++) {
     arr[i] = [...input[i + 1].split('')];
 }
+console.log(arr);
 let dx = [-1, 1, 0, 0];
 let dy = [0, 0, -1, 1];
 let result1 = 0;
