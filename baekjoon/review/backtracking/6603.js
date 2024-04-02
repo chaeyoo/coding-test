@@ -9,7 +9,7 @@ const selected = [];
 for (let tc = 0; tc < input.length - 1; tc++) {
     arr = [];
     const tmp = input[tc].split(' ').map(Number);
-    n = tmp[0];
+    tc = tmp[0];
     arr = tmp.slice(1);
     dfs(arr, 0, 0);
     answer += '\n';
@@ -27,7 +27,7 @@ function dfs(arr, depth, start) {
         return;
     }
 
-    for (let i=start; i<n; i++) {
+    for (let i=start; i<tc; i++) {
         if (visitied[i]) continue;
         visitied[i] = true;
         selected.push(arr[i]);
