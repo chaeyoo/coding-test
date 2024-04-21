@@ -21,6 +21,7 @@ for (let a of prefixSum) {
     processed.push(a % m);
 }
 
+console.log(processed)
 // 나머지 각각 개수를 COUNTING
 let counter = {};
 for (let i=0; i<=n; i++) {
